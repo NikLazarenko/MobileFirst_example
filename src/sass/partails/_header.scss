@@ -1,0 +1,46 @@
+.header {
+  padding-top: 42px;
+}
+
+.header__top-line {
+  height: 20px;
+  background-color: $dark-gray-color;
+}
+
+.header__name {
+  color: $black-color;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+
+.header__name-desc {
+  color: $main-blue-color;
+  line-height: 0.85;
+  text-transform: uppercase;
+}
+
+.header__menu {
+  float: right;
+}
+
+.header__menu-item {
+  @include clearfix;
+}
+
+.header__menu-item {
+  border-radius: 50% 0 50% 50%;
+  border: 1px solid $white-color;
+  background-color: $dark-gray-color;
+  float: left;
+  text-align: center;
+}
+
+.header__menu-link {
+  line-height: 73px;
+  width: 70px;
+  display: block;
+  color: $white-color;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'ubuntu', sans-serif;
+}

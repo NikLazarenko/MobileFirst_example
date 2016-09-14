@@ -22,3 +22,31 @@
     clear: both;
   }
 }
+
+$xsmall: 360px;
+$small: 480px;
+$medium: 640px;
+$tablet: 768px;
+$large: 1024px;
+$xlarge: 1280px;
+
+@mixin breakpoint($point) {
+  @if $point == b-xsmall  {
+    @media only screen and(max-width: $xsmall) { @content ; }
+  }
+  @else if $point == b-small {
+    @media only screen and(min-width: $small) { @content ; }
+  }
+  @else if $point == b-medium {
+    @media only screen and(min-width: $medium) { @content ; }
+  }
+  @else if $point == b-tablet {
+    @media only screen and (min-width: $tablet){ @content ; }
+  }
+  @else if $point == b-large {
+    @media only screen and (min-width: $large){ @content ; }
+  }
+  @else if $point == b-xlarge {
+    @media only screen and (min-width: $xlarge){ @content ; }
+  }
+}
