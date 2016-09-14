@@ -1,0 +1,40 @@
+*{
+  outline: none;
+  box-sizing: border-box;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  font-family: 'ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+li{
+  list-style-type: none;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+p{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+  &:active{
+    text-decoration: none;
+  }
+}
+
+h2 {
+  font-family: 'Franklin Ghothic', sans-serif;
+  font-size: 67px;
+}
