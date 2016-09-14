@@ -28,19 +28,27 @@
 }
 
 .header__menu-item {
-  border-radius: 50% 0 50% 50%;
-  border: 1px solid $white-color;
-  background-color: $dark-gray-color;
   float: left;
   text-align: center;
+  margin-right: 10px;
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
 
 .header__menu-link {
-  line-height: 73px;
-  width: 70px;
   display: block;
+  padding: 28px 0;
+  width: 74px;
+  border-radius: 50% 0 50% 50%;
+  border: 1px solid $white-color;
+  background-color: $dark-gray-color;
   color: $white-color;
   text-align: center;
   text-transform: uppercase;
   font-family: 'ubuntu', sans-serif;
+}
+
+.header__menu-link--large {
+  padding: 21px 0;
 }
