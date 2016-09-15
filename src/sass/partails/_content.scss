@@ -1,0 +1,139 @@
+.content__about {
+  padding-top: 95px;
+  padding-bottom: 34px;
+}
+
+.content__title {
+  padding-bottom: 33px;
+  text-transform: uppercase;
+}
+
+.content__text {
+  padding-bottom: 23px;
+  line-height: 24px;
+  a {
+    color: $dark-blue-color;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.content__work {
+  padding-bottom: 76px;
+}
+
+.content__work-item {
+  margin-left: 14px;
+  line-height: 37px;
+  text-transform: uppercase;
+  list-style-image: url("../img/arrow-right.png");
+}
+
+.content__work-link {
+  &:hover {
+    color: $dark-blue-color;
+  }
+}
+
+.content__small-title {
+  padding-top: 3px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.content__connect-form {
+  display: block;
+  position: relative;
+  margin-right: 34px;
+  margin-bottom: 78px;
+}
+
+.content__connect-input {
+  display: block;
+  width: 85%;
+  margin-bottom: 20px;
+  padding: 6px 7px;
+  border: 1px solid $dark-gray-color;
+  &:focus {
+    border: 1px solid $light-blue-color;
+    box-shadow: 0 0 4px $light-blue-color;
+  }
+}
+
+.content__connect--textarea {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 10px 7px;
+  resize: none;
+}
+
+@include placeholder {
+  color: $black-color;
+}
+
+@include placeholder-focus {
+  color: transparent;
+}
+
+.content__connect-button {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  display: block;
+  width: 52px;
+  height: 49px;
+  border: 1px solid $white-color;
+  border-radius: 50% 0 50% 50%;
+  background-color: $dark-gray-color;
+  color: $white-color;
+  transition: .2s ease;
+  &:hover {
+    background-color: $main-blue-color;
+    transition: .2s ease;
+  }
+}
+
+.content__contact-item {
+  margin-bottom: 30px;
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.contact__circle-block {
+  display: inline-block;
+  margin-right: 3px;
+  width: 47px;
+  height: 47px;
+  border: 1px solid $white-color;
+  border-radius: 50%;
+  background-color: $dark-gray-color;
+  vertical-align: middle;
+}
+
+.contact__icon {
+  display: block;
+  color: $white-color;
+  text-align: center;
+  line-height: 44px;
+  font-size: 21px;
+}
+
+.contact__icon--large {
+  font-size: 26px;
+}
+
+.contact__description {
+  display: inline-block;
+  vertical-align: middle;
+  span {
+    display: block;
+    line-height: 22px;
+    &:last-of-type {
+      color: $dark-blue-color;
+    }
+  }
+}

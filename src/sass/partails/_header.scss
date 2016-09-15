@@ -30,7 +30,7 @@
 .header__menu-item {
   float: left;
   text-align: center;
-  margin-right: 10px;
+  margin-right: 11px;
   &:last-of-type {
     margin-right: 0;
   }
@@ -38,7 +38,7 @@
 
 .header__menu-link {
   display: block;
-  padding: 28px 0;
+  padding: 27px 0;
   width: 74px;
   border-radius: 50% 0 50% 50%;
   border: 1px solid $white-color;
@@ -47,6 +47,11 @@
   text-align: center;
   text-transform: uppercase;
   font-family: 'ubuntu', sans-serif;
+  transition: .2s ease-in;
+  &:hover {
+    background-color: $main-blue-color;
+    transition: .2s ease-in;
+  }
 }
 
 .header__menu-link--large {
