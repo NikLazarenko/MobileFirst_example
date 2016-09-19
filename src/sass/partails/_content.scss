@@ -112,6 +112,9 @@
   border-radius: 50%;
   background-color: $dark-gray-color;
   vertical-align: middle;
+  &--top {
+    vertical-align: top;
+  }
 }
 
 .contact__icon {
@@ -134,6 +137,35 @@
     line-height: 22px;
     &:last-of-type {
       color: $dark-blue-color;
+    }
+  }
+}
+
+.content__welcome {
+  margin-top: -61px;
+}
+
+.content__portfolio-item {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  box-shadow: 0 0 0 2px $dark-gray-color;
+  .content__portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transition: .3s ease-in;
+    background-color: rgba(236, 236, 237, 0.4);
+  }
+  &:hover {
+    transition: .3s ease-in;
+    .content__portfolio-overlay {
+      visibility: visible;
+      transition: .3s ease-in;
     }
   }
 }
