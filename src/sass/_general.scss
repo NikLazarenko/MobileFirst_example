@@ -47,9 +47,9 @@ h2 {
 }
 
 .container {
+  position: relative;
   padding: 0 15px;
   margin: auto;
-
   @include clearfix;
 
   @include breakpoint(b-xsmall) {

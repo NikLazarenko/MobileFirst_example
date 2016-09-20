@@ -1,3 +1,7 @@
+.content {
+  padding-bottom: 136px;
+}
+
 .content__about {
   padding-top: 95px;
   padding-bottom: 34px;
@@ -145,27 +149,220 @@
   margin-top: -61px;
 }
 
+.content__portfolio {
+  margin-bottom: 87px;
+}
+
+.content__portfolio-wrap {
+  margin-top: 50px;
+}
+
 .content__portfolio-item {
   position: relative;
   width: 100%;
   height: 450px;
   box-shadow: 0 0 0 2px $dark-gray-color;
-  .content__portfolio-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    visibility: hidden;
-    width: 100%;
-    height: 100%;
-    transition: .3s ease-in;
-    background-color: rgba(236, 236, 237, 0.4);
-  }
   &:hover {
-    transition: .3s ease-in;
     .content__portfolio-overlay {
-      visibility: visible;
+      opacity: 1;
       transition: .3s ease-in;
     }
+  }
+}
+
+.content__portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: table;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: .3s ease-in;
+}
+
+.content__portfolio-zoom {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  background: url("../img/magnifier.png") no-repeat center;
+  cursor: pointer;
+}
+
+.content__skills {
+  margin-bottom: 74px;
+}
+
+.content__skills-graph {
+  position: relative;
+  height: 230px;
+  width: 100%;
+  border-bottom: 1px solid $dark-gray-color;
+  border-left: 1px solid $dark-gray-color;
+}
+
+.content__skill-item {
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  height: 100%;
+  width: 50px;
+  &:first-of-type {
+    margin-left: 13px;
+  }
+}
+
+.content__skill {
+  position: absolute;
+  bottom: 0;
+  color: $black-color;
+  width: 100%;
+  background-color: $dark-gray-color;
+  span {
+    display: block;
+    position: absolute;
+    bottom: 26px;
+    width: 100%;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+  }
+}
+
+.content__skill--color {
+  background-color: $light-blue-color;
+}
+
+.content__technologies {
+  margin-bottom: 115px;
+}
+
+.content__technologies-list {
+  display: inline-block;
+  margin-top: 33px;
+  vertical-align: middle;
+}
+
+.content__technologies-item {
+  display: inline-block;
+  margin-right: 19px;
+  vertical-align: middle;
+  background: url("../img/technologies.png") no-repeat center;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.content__joomla {
+  width: 43px;
+  height: 43px;
+  background-position: -7px -7px;
+}
+
+.content__jquery {
+  width: 78px;
+  height: 84px;
+  background-position: -7px -64px;
+  opacity: .54;
+}
+
+.content__php {
+  width: 53px;
+  height: 53px;
+  background-position: -7px -162px;
+}
+
+.content__sql {
+  width: 124px;
+  height: 65px;
+  background-position: -7px -229px;
+}
+
+.content__wordpress {
+  width: 58px;
+  height: 55px;
+  background-position: -7px -308px;
+}
+
+.content__help {
+  position: relative;
+  @include clearfix;
+}
+
+.content__photo-wrap {
+  position: relative;
+  float: left;
+  margin-top: 80px;
+  width: 30%;
+  @include clearfix;
+}
+
+.content__help-wrap {
+  float: right;
+  padding-left: 40px;
+  width: 70%;
+}
+
+.content__photo-back-1 {
+  position: relative;
+  width: 200px;
+  height: 221px;
+  background-color: $white-color;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.34);
+  transform: rotate(-6deg);
+}
+.content__photo-back-2 {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 221px;
+  background-color: $white-color;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.34);
+  transform: rotate(-12deg);
+}
+
+.content__photo {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border: 11px solid $white-color;
+  width: 200px;
+  height: 221px;
+  background: url("../img/photo.png") no-repeat center;
+}
+
+.content__align {
+  float: right;
+}
+
+.content__help-list {
+  display: block;
+}
+
+.content__help-item {
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.content__to-top {
+  position: absolute;
+  right: 0;
+  bottom: -125px;
+  display: block;
+  width: 52px;
+  height: 49px;
+  border: 1px solid #ffffff;
+  border-radius: 50% 0 50% 50%;
+  background-color: #c0c0c2;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 49px;
+  transition: .2s ease;
+  &:hover {
+    background-color: $main-blue-color;
+    transition: .2s ease;
   }
 }

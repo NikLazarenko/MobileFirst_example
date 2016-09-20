@@ -54,6 +54,10 @@
   }
 }
 
+.is--active {
+  background-color: $main-blue-color;
+}
+
 .header__menu-link--large {
   padding: 21px 0;
 }

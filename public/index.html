@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="header__top-line"></div>
-    <header class="header">
+    <header class="header" id="home">
         <div class="container">
             <div class="column">
                 <h2 class="header__name">Adrian Olivier</h2>
@@ -18,10 +18,10 @@
             <div class="column">
                 <div class="header__menu">
                     <ul class="header__menu-list">
-                        <li class="header__menu-item"><a href="#" class="header__menu-link">Home</a></li>
-                        <li class="header__menu-item"><a href="#" class="header__menu-link">Work</a></li>
-                        <li class="header__menu-item"><a href="#" class="header__menu-link header__menu-link--large">Get In touch</a></li>
-                        <li class="header__menu-item"><a href="#" class="header__menu-link">Skills</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link is--active">Home</a></li>
+                        <li class="header__menu-item"><a href="#work" class="header__menu-link">Work</a></li>
+                        <li class="header__menu-item"><a href="#get-in-touch" class="header__menu-link header__menu-link--large">Get In touch</a></li>
+                        <li class="header__menu-item"><a href="#skills" class="header__menu-link">Skills</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,12 +34,13 @@
                 <div class="content__about">
                     <h2 class="content__title">About me</h2>
                     <p class="content__text">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.
-                        <a href="#">Curabitur et ligula.</a></p>
+                        <a href="#">Curabitur et ligula.</a>
+                    </p>
                     <p class="content__text">Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis.
                         <br>Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit</p>
                 </div>
 
-                <div class="content__work">
+                <div class="content__work" id="work">
                     <h2 class="content__title">Work</h2>
                     <ul class="content__work-list">
                         <li class="content__work-item">
@@ -63,7 +64,7 @@
                     </ul>
                 </div>
 
-                <div class="content__connect">
+                <div class="content__connect" id="get-in-touch">
                     <h2 class="content__title">Get in touch</h2>
                     <h5 class="content__small-title">Send me a message</h5>
                     <form class="content__connect-form">
@@ -136,15 +137,105 @@
                         <div class="content__portfolio-item">
                             <img src="img/img1.png" alt="img1">
                             <div class="content__portfolio-overlay">
-                                dfsf
+                                <span class="content__portfolio-zoom"></span>
                             </div>
                         </div>
                         <div class="content__portfolio-item">
                             <img src="img/img2.png" alt="img1">
+                            <div class="content__portfolio-overlay">
+                                <span class="content__portfolio-zoom"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="content__skills" id="skills">
+                    <h2 class="content__title">Skills</h2>
+                    <h5 class="content__small-title">Technical skills</h5>
+                    <div class="content__skills-graph">
+                        <div class="content__skill-item">
+                            <div class="content__skill" style="height: 98%;">
+                                <span>php</span>
+                            </div>
+                        </div>
+                        <div class="content__skill-item">
+                            <div class="content__skill content__skill--color" style="height: 82%">
+                                <span>asp/perl</span>
+                            </div>
+                        </div>
+                        <div class="content__skill-item">
+                            <div class="content__skill content__seo-skill" style="height: 73%;">
+                                <span>seo</span>
+                            </div>
+                        </div>
+                        <div class="content__skill-item">
+                            <div class="content__skill content__css-skill content__skill--color" style="height: 90%">
+                                <span>xhtml/css</span>
+                            </div>
+                        </div>
+                        <div class="content__skill-item">
+                            <div class="content__skill content__photoshop-skill" style="height: 61%">
+                                <span>photoshop</span>
+                            </div>
+                        </div>
+                        <div class="content__skill-item">
+                            <div class="content__skill content__ruby-skill content__skill--color" style="height: 83%;">
+                                <span><nobr>ruby on rails</nobr></span>
+                            </div>
+                        </div>
+                        <div class="content__skill-item">
+                            <div class="content__skill content__wordpress-skill" style="height:  50%;">
+                                <span>wordpress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__technologies">
+                    <h5 class="content__small-title">Technology</h5>
+                    <ul class="content__technologies-list">
+                        <li class="content__technologies-item content__wordpress"></li>
+                        <li class="content__technologies-item content__joomla"></li>
+                        <li class="content__technologies-item content__jquery"></li>
+                        <li class="content__technologies-item content__sql"></li>
+                        <li class="content__technologies-item content__php"></li>
+                    </ul>
+                </div>
             </div>
+        </div>
+
+        <div class="container">
+            <div class="content__help">
+                <div class="content__photo-wrap">
+                    <div class="content__align">
+                        <div class="content__photo-back-1"></div>
+                        <div class="content__photo-back-2"></div>
+                        <div class="content__photo"></div>
+                    </div>
+                </div>
+
+                <div class="content__help-wrap">
+                    <h2 class="content__title">How can i help?</h2>
+                    <ul class="content__help-list">
+                        <li class="content__help-item">Standards compliant XHTML/CSS</li>
+                        <li class="content__help-item">Cross-Browser Testing & Fixing</li>
+                        <li class="content__help-item">Coding Email Newsletters</li>
+                        <li class="content__help-item">CMS Templates</li>
+                        <li class="content__help-item">Hosting/Linux Server Admin</li>
+                        <li class="content__help-item">Delivering Email Campaigns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <a href="#home" class="content__to-top">Top</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer__copyright">Design by Webvilla.pl 2012</div>
         </div>
     </div>
 
