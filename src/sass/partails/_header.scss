@@ -1,26 +1,96 @@
 .header {
-  padding-top: 42px;
+  padding-top: 20px;
+  @include breakpoint(b-large) {
+    padding-top: 42px;
+  }
 }
 
 .header__top-line {
-  height: 20px;
-  background-color: $dark-gray-color;
+  display: none;
+  @include breakpoint(b-large) {
+    display: block;
+    height: 20px;
+    background-color: $dark-gray-color;
+  }
+}
+
+.header__human-info {
+  float: left;
+  padding-bottom: 20px;
+  @include breakpoint(b-large) {
+    padding-bottom: 0;
+  }
 }
 
 .header__name {
-  color: $black-color;
-  line-height: 0.8;
-  text-transform: uppercase;
+  font-size: 36px;
+  @include breakpoint(b-small) {
+    font-size: 40px;
+  }
+  @include breakpoint(b-large) {
+    color: $black-color;
+    line-height: 0.8;
+    text-transform: uppercase;
+    font-size: 67px;
+  }
 }
 
 .header__name-desc {
-  color: $main-blue-color;
-  line-height: 0.85;
+  font-size: 26px;
+  @include breakpoint(b-small) {
+    font-size: 30px;
+  }
+  @include breakpoint(b-large) {
+    color: $main-blue-color;
+    line-height: 0.85;
+    text-transform: uppercase;
+    font-size: 67px;
+  }
+}
+
+.mobile-menu-list {
+  display: none;
+  text-align: center;
+  @include breakpoint(b-large) {
+    display: none;
+  }
+}
+
+.mobile-menu--is-active {
+  display: block;
+  @include breakpoint(b-large) {
+    display: none;
+  }
+}
+
+.mobile-menu-item {
   text-transform: uppercase;
+  font-size: 16px;
+}
+
+.mobile-menu-link {
+  display: block;
+  padding: 10px 5px;
+  font-family: 'Franklin Ghothic', sans-serif;
+  color: $dark-gray-color;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.header__mobile-menu {
+  padding-top: 5px;
+  float: right;
+  @include breakpoint(b-large) {
+    display: none;
+  }
 }
 
 .header__menu {
-  float: right;
+  display: none;
+  @include breakpoint(b-large) {
+    display: block;
+    float: right;
+  }
 }
 
 .header__menu-item {
@@ -28,36 +98,44 @@
 }
 
 .header__menu-item {
-  float: left;
-  text-align: center;
-  margin-right: 11px;
-  &:last-of-type {
-    margin-right: 0;
+  @include breakpoint(b-large) {
+    float: left;
+    text-align: center;
+    margin-right: 11px;
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
 .header__menu-link {
-  display: block;
-  padding: 27px 0;
-  width: 74px;
-  border-radius: 50% 0 50% 50%;
-  border: 1px solid $white-color;
-  background-color: $dark-gray-color;
-  color: $white-color;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'ubuntu', sans-serif;
-  transition: .2s ease-in;
-  &:hover {
-    background-color: $main-blue-color;
+  @include breakpoint(b-large) {
+    display: block;
+    padding: 27px 0;
+    width: 74px;
+    border-radius: 50% 0 50% 50%;
+    border: 1px solid $white-color;
+    background-color: $dark-gray-color;
+    color: $white-color;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'ubuntu', sans-serif;
     transition: .2s ease-in;
+    &:hover {
+      background-color: $main-blue-color;
+      transition: .2s ease-in;
+    }
   }
 }
 
 .is--active {
-  background-color: $main-blue-color;
+  @include breakpoint(b-large) {
+    background-color: $main-blue-color;
+  }
 }
 
 .header__menu-link--large {
-  padding: 21px 0;
+  @include breakpoint(b-large) {
+    padding: 21px 0;
+  }
 }

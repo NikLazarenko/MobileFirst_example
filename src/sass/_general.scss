@@ -43,7 +43,9 @@ a{
 h2 {
   color: $dark-gray-color;
   font-family: 'Franklin Ghothic', sans-serif;
-  font-size: 67px;
+  @include breakpoint(b-large) {
+    font-size: 67px;
+  }
 }
 
 .container {
@@ -70,11 +72,39 @@ h2 {
 }
 
 .column {
-  float: left;
-  padding-right: 10px;
-  width: 50%;
+  width: 100%;
+  @include clearfix;
+  @include breakpoint(b-large) {
+    float: left;
+    padding-right: 10px;
+    width: 50%;
+  }
 }
 
 .column--right {
-  padding-left: 30px;
+  @include breakpoint(b-large) {
+    padding-left: 30px;
+  }
+}
+
+
+.animated {
+  animation-duration: .7s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
 }

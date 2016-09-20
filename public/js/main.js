@@ -12,4 +12,11 @@ $(document).ready(function(){
     $('.content__to-top').click(function(){
         $(this).mPageScroll2id();
     });
+
+
+    //hamburger handler
+    $('.hamburger').click(function(){
+        $(this).toggleClass('is-active');
+        $('.mobile-menu-list').toggleClass('animated fadeInDown mobile-menu--is-active');
+    });
 });
