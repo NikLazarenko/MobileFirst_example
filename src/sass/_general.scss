@@ -52,6 +52,7 @@ h2 {
   position: relative;
   padding: 0 15px;
   margin: auto;
+  min-width: 320px;
   @include clearfix;
 
   @include breakpoint(b-xsmall) {
@@ -81,7 +82,12 @@ h2 {
   }
 }
 
+.column--left {
+  float: right;
+}
+
 .column--right {
+  float: right;
   @include breakpoint(b-large) {
     padding-left: 30px;
   }

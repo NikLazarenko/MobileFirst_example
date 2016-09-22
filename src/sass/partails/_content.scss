@@ -5,7 +5,6 @@
 }
 
 .content__about {
-  padding-top: 20px;
   @include breakpoint(b-large) {
     padding-top: 95px;
     padding-bottom: 34px;
@@ -13,22 +12,42 @@
 }
 
 .content__title {
-  padding-bottom: 15px;
+  padding-bottom: 20px;
   text-transform: uppercase;
-  font-size: 21px;
+  font-size: 23px;
+  @include breakpoint(b-small) {
+    font-size: 28px;
+  }
+  @include breakpoint(b-medium) {
+    padding-bottom: 24px;
+    font-size: 30px;
+  }
   @include breakpoint(b-large) {
     padding-bottom: 33px;
+    font-size: 67px;
   }
 }
 
 .content__text {
-  padding-bottom: 23px;
-  line-height: 24px;
+  padding-bottom: 15px;
+  text-align: justify;
+  line-height: 20px;
+  font-size: 13px;
   a {
     color: $dark-blue-color;
     &:hover {
       text-decoration: underline;
     }
+  }
+  @include breakpoint(b-xsmall) {
+    font-size: 14px;
+  }
+  @include breakpoint(b-medium) {
+    text-align: left;
+  }
+  @include breakpoint(b-large) {
+    padding-bottom: 23px;
+    line-height: 24px;
   }
 }
 
@@ -155,26 +174,45 @@
 }
 
 .content__welcome {
-  margin-top: -61px;
+  @include breakpoint(b-large) {
+    margin-top: -61px;
+  }
 }
 
 .content__portfolio {
-  margin-bottom: 87px;
+  margin-bottom: 35px;
+  @include breakpoint(b-large) {
+    margin-bottom: 87px;
+  }
 }
 
 .content__portfolio-wrap {
-  margin-top: 50px;
+  width: 80%;
+  margin: 15px auto 0 auto;
+  @include breakpoint(b-large) {
+    margin-top: 50px;
+    width: 100%;
+  }
 }
 
 .content__portfolio-item {
   position: relative;
   width: 100%;
-  height: 450px;
-  box-shadow: 0 0 0 2px $dark-gray-color;
+  max-height: 250px;
   &:hover {
     .content__portfolio-overlay {
       opacity: 1;
       transition: .3s ease-in;
+    }
+  }
+  @include breakpoint(b-small) {
+    max-height: 450px;
+  }
+  img {
+    min-height: 250px;
+    width: 100%;
+    @include breakpoint(b-small) {
+      min-height: 450px;
     }
   }
 }
@@ -184,25 +222,40 @@
   top: 0;
   left: 0;
   z-index: 3;
-  display: table;
   opacity: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   transition: .3s ease-in;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 59px;
+    height: 59px;
+    background: url("../img/magnifier.png") no-repeat center;
+    cursor: pointer;
+  }
 }
 
 .content__portfolio-zoom {
-  display: table-cell;
-  vertical-align: middle;
-  height: 100%;
-  width: 100%;
+  display: block;
+  margin: 44% auto;
+  width: 59px;
+  height: 59px;
   background: url("../img/magnifier.png") no-repeat center;
   cursor: pointer;
 }
 
 .content__skills {
-  margin-bottom: 74px;
+  margin-bottom: 35px;
+  @include breakpoint(b-large) {
+    margin-bottom: 74px;
+  }
 }
 
 .content__skills-graph {
@@ -216,11 +269,19 @@
 .content__skill-item {
   display: inline-block;
   position: relative;
-  margin-left: 10px;
+  width: 12%;
+  max-width: 50px;
   height: 100%;
-  width: 50px;
+  margin-left: 3px;
   &:first-of-type {
-    margin-left: 13px;
+    margin-left: 7px;
+  }
+  @include breakpoint(b-large) {
+    margin-left: 10px;
+    width: 50px;
+    &:first-of-type {
+      margin-left: 13px;
+    }
   }
 }
 
@@ -250,8 +311,10 @@
 
 .content__technologies-list {
   display: inline-block;
-  margin-top: 33px;
   vertical-align: middle;
+  @include breakpoint(b-large) {
+    margin-top: 33px;
+  }
 }
 
 .content__technologies-item {

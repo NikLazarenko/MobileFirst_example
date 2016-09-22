@@ -16,7 +16,7 @@
 
 .header__human-info {
   float: left;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   @include breakpoint(b-large) {
     padding-bottom: 0;
   }
@@ -27,6 +27,9 @@
   @include breakpoint(b-small) {
     font-size: 40px;
   }
+  @include breakpoint(b-medium) {
+    font-size: 46px;
+  }
   @include breakpoint(b-large) {
     color: $black-color;
     line-height: 0.8;
@@ -36,9 +39,12 @@
 }
 
 .header__name-desc {
-  font-size: 26px;
+  font-size: 28px;
   @include breakpoint(b-small) {
     font-size: 30px;
+  }
+  @include breakpoint(b-medium) {
+    font-size: 38px;
   }
   @include breakpoint(b-large) {
     color: $main-blue-color;
@@ -50,6 +56,8 @@
 
 .mobile-menu-list {
   display: none;
+  margin-top: -15px;
+  margin-bottom: 30px;
   text-align: center;
   @include breakpoint(b-large) {
     display: none;
@@ -78,7 +86,7 @@
 }
 
 .header__mobile-menu {
-  padding-top: 5px;
+  padding-top: 7px;
   float: right;
   @include breakpoint(b-large) {
     display: none;
