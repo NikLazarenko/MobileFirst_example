@@ -6,7 +6,7 @@ $('.content__portfolio-wrap').slick({
 });
 
 $(document).ready(function(){
-    $('.header__menu a').click(function(){
+    $('.header__menu a, .mobile-menu-list a').click(function(){
         $(this).mPageScroll2id({offset: 50});
     });
     $('.content__to-top').click(function(){

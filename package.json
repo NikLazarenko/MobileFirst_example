@@ -7,6 +7,7 @@
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssmin": "^0.1.7",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",

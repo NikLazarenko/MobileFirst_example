@@ -5,6 +5,7 @@
 }
 
 .content__about {
+  padding-bottom: 20px;
   @include breakpoint(b-large) {
     padding-top: 95px;
     padding-bottom: 34px;
@@ -52,14 +53,23 @@
 }
 
 .content__work {
-  padding-bottom: 76px;
+  padding-bottom: 32px;
+  @include breakpoint(b-large) {
+    padding-bottom: 76px;
+  }
 }
 
 .content__work-item {
   margin-left: 14px;
-  line-height: 37px;
+  line-height: 25px;
   text-transform: uppercase;
   list-style-image: url("../img/arrow-right.png");
+  @include breakpoint(b-medium) {
+    line-height: 30px;
+  }
+  @include breakpoint(b-large) {
+    line-height: 37px;
+  }
 }
 
 .content__work-link {
@@ -77,19 +87,24 @@
 .content__connect-form {
   display: block;
   position: relative;
-  margin-right: 34px;
   margin-bottom: 78px;
+  @include breakpoint(b-large) {
+    margin-right: 34px;
+  }
 }
 
 .content__connect-input {
   display: block;
-  width: 85%;
+  width: 100%;
   margin-bottom: 20px;
   padding: 6px 7px;
   border: 1px solid $dark-gray-color;
   &:focus {
     border: 1px solid $light-blue-color;
     box-shadow: 0 0 4px $light-blue-color;
+  }
+  @include breakpoint(b-large) {
+    width: 85%;
   }
 }
 
@@ -111,7 +126,7 @@
 .content__connect-button {
   position: absolute;
   right: 0;
-  bottom: 3px;
+  bottom: -60px;
   display: block;
   width: 52px;
   height: 49px;
@@ -123,6 +138,27 @@
   &:hover {
     background-color: $main-blue-color;
     transition: .2s ease;
+  }
+  @include breakpoint(b-large) {
+    bottom: 3px;
+  }
+}
+
+.content__contacts {
+  @include clearfix;
+  margin-bottom: 40px;
+  @include breakpoint(b-large) {
+    margin-bottom: 0;
+  }
+}
+
+.column-contacts {
+  width: 100%;
+  @include clearfix;
+  @include breakpoint(b-medium) {
+    float: left;
+    padding-right: 10px;
+    width: 50%;
   }
 }
 
@@ -306,12 +342,16 @@
 }
 
 .content__technologies {
-  margin-bottom: 115px;
+  margin-bottom: 40px;
+  @include breakpoint(b-large) {
+    margin-bottom: 115px;
+  }
 }
 
 .content__technologies-list {
   display: inline-block;
   vertical-align: middle;
+  text-align: center;
   @include breakpoint(b-large) {
     margin-top: 33px;
   }
@@ -319,11 +359,14 @@
 
 .content__technologies-item {
   display: inline-block;
-  margin-right: 19px;
+  margin: 12px;
   vertical-align: middle;
   background: url("../img/technologies.png") no-repeat center;
   &:last-of-type {
     margin-right: 0;
+  }
+  @include breakpoint(b-large) {
+    margin: 0 19px 0 0;
   }
 }
 
@@ -360,21 +403,42 @@
 
 .content__help {
   position: relative;
+  margin-bottom: 50px;
   @include clearfix;
+  @include breakpoint(b-large) {
+    margin-bottom: 0;
+  }
 }
 
 .content__photo-wrap {
+  width: 200px;
+  margin: auto;
   position: relative;
-  float: left;
-  margin-top: 80px;
-  width: 30%;
   @include clearfix;
+  @include breakpoint(b-medium) {
+    float: left;
+    margin-top: 60px;
+    margin-left: 20px;
+  }
+  @include breakpoint(b-large) {
+    width: 30%;
+    margin-top: 80px;
+    margin-left: 0;
+  }
 }
 
 .content__help-wrap {
-  float: right;
-  padding-left: 40px;
-  width: 70%;
+  margin-top: 40px;
+  text-align: center;
+  @include breakpoint(b-medium) {
+    float: right;
+    text-align: left;
+  }
+  @include breakpoint(b-large) {
+    width: 70%;
+    padding-left: 40px;
+    margin-top: 0;
+  }
 }
 
 .content__photo-back-1 {
@@ -406,7 +470,9 @@
 }
 
 .content__align {
-  float: right;
+  @include breakpoint(b-large) {
+    float: right;
+  }
 }
 
 .content__help-list {
@@ -420,7 +486,7 @@
 
 .content__to-top {
   position: absolute;
-  right: 0;
+  right: 15px;
   bottom: -125px;
   display: block;
   width: 52px;
@@ -436,5 +502,8 @@
   &:hover {
     background-color: $main-blue-color;
     transition: .2s ease;
+  }
+  @include breakpoint(b-tablet) {
+    right: 0;
   }
 }

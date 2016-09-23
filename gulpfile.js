@@ -5,6 +5,9 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 
+var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
+
 // Static server
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -31,6 +34,8 @@ gulp.task('css', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer('last 10 version', 'ie 9'))
         .pipe(sourcemaps.write())
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('public/css'))
         .pipe(browserSync.stream());
 });
