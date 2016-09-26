@@ -54,8 +54,13 @@
   }
 }
 
-.mobile-menu-list {
+.mobile-menu {
   display: none;
+  text-align: center;
+}
+
+.mobile-menu-list {
+  display: inline-block;
   margin-top: -15px;
   margin-bottom: 30px;
   text-align: center;

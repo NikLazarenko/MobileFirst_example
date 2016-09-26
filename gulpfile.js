@@ -1,12 +1,9 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var rigger = require('gulp-rigger');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-
 var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
 
 // Static server
 gulp.task('browser-sync', function() {
@@ -21,7 +18,6 @@ gulp.task('browser-sync', function() {
 //html
 gulp.task('html', function () {
     gulp.src('src/*.html')
-        .pipe(rigger())
         .pipe(gulp.dest('public/'))
         .pipe(browserSync.stream());
 });
@@ -35,7 +31,6 @@ gulp.task('css', function () {
         .pipe(autoprefixer('last 10 version', 'ie 9'))
         .pipe(sourcemaps.write())
         .pipe(cssmin())
-        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('public/css'))
         .pipe(browserSync.stream());
 });
